@@ -1,24 +1,24 @@
 ## Background
 
-For students who takes ==COMP 4537 ISO==in BCIT, you have to deploy multiple websites in cloud, and many of you guys don't have experience on ==Cloud Computing== or Hosting websites.
+For students who takes **COMP 4537 ISO** in BCIT, you have to deploy multiple websites in cloud, and many of you guys don't have experience on **Cloud Computing** or Hosting websites.
 
-This article would teach you how to deploy your projects (static `HTML` files and `React` Projects) with ==HTTPS== in the easiest and cheapest way.
+This article would teach you how to deploy your projects (static `HTML` files and `React` Projects) with **HTTPS** in the easiest and cheapest way.
 
 ## Precondition
 
-It wouldn't need ==any== coding knowledge. You only need to type some Linux commands at first, and then you can host your projects via your panel website.
+It wouldn't need **any** coding knowledge. You only need to type some Linux commands at first, and then you can host your projects via your panel website.
 
-You do need a ==debt card== or ==credit card==.
+You do need a **debt card** or **credit card**.
 
 ## Technologies That Would Be Used 
 
 * [Github Student Pack](https://education.github.com/pack)
 * VPS Provider: [DigitalOcean Student Pack](https://www.digitalocean.com/github-students/)
-  * You would get ==$100== free amount for your VPS
-  * The cheapest Linux VM costs only ==$5== monthly, and that's enough for deploying small projects (I prefer the ==$10== version...)
+  * You would get **$100** free amount for your VPS
+  * The cheapest Linux VM costs only **$5** monthly, and that's enough for deploying small projects (I prefer the **$10** version...)
   * You can switch to [AWS EC2](https://aws.amazon.com/ec2/?did=ft_card&trk=ft_card&ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc) which also provides 1 year free Linux VM, but you have to enable Port 80(HTTP), 443(HTTPS) and 8888(aaPanel) in your security group
 * Hosting Control Panel: [aaPanel](https://www.aapanel.com/index.html)
-  * It would be used for ==deploying and managing== your projects
+  * It would be used for **deploying and managing** your projects
   * If you prefer Chinese, you can use the chinese version [宝塔终端](https://www.bt.cn/)
 * [Node.js 14.17.6 (Stable Version)](https://nodejs.org/en/)
 
@@ -34,7 +34,7 @@ You can also click the following icon for your registration. You would also get 
 
 ## Buy a Domain
 
-In case to enable `HTTPS`, you need a domain. Usually it is not expensive, approximately ==$12== per year. 
+In case to enable `HTTPS`, you need a domain. Usually it is not expensive, approximately **$12** per year. 
 
 You can choose one of the domain providers in:
 
@@ -47,7 +47,7 @@ You can choose one of the domain providers in:
 
 1. Go to dashboard of `digitalOcean`.
 
-2. At the left side bar, choose ==Droplets== and Create it.
+2. At the left side bar, choose **Droplets** and Create it.
 
    ![image-20210905173648970](image-20210905173648970.png)
 
@@ -87,13 +87,13 @@ Once the install process done, you would see the consoles below, be sure to writ
 
 ![image-20210905181312435](image-20210905181312435.png)
 
-You can ==close the terminal== now since we no longer need it.
+You can **close the terminal** now since we no longer need it.
 
 ## Install Required Dependencies
 
 ### Login to the Panel
 
-Copy the ==Internet Address== you have seen before, enter the Username and Password.
+Copy the **Internet Address** you have seen before, enter the Username and Password.
 
 ![image-20210905182821184](image-20210905182821184.png)
 
@@ -141,7 +141,7 @@ Check `yarn` and `pm2` version
 
 ### Install PM2 in App Store
 
-Click `App Store` in side menu and search pm2, click install and check ==Display on dashboard==
+Click `App Store` in side menu and search pm2, click install and check **Display on dashboard**
 
 ![image-20210906004043338](image-20210906004043338.png)
 
@@ -169,13 +169,13 @@ Suppose your domain is `aaa.com`, then create both 3 Type A records and Type AAA
 | www.aaa.com | AAAA        | IPV6 Address |
 | *.aaa.com   | AAAA        | IPV6 Address |
 
-`*` means you are enabling the traffic of all sub domains, like ==sub.aaa.com==
+`*` means you are enabling the traffic of all sub domains, like **sub.aaa.com**
 
-You definitely can disable this option, as long as you add two records for ==sub.aaa.com== 
+You definitely can disable this option, as long as you add two records for **sub.aaa.com** 
 
 ## Deploy static HTML Website
 
-In the side menu, click ==Website== and `Add site`
+In the side menu, click **Website** and `Add site`
 
 ![image-20210905192545188](image-20210905192545188.png)
 
@@ -185,7 +185,7 @@ Enter your `domain`, if your domain is aaa, you should enter:
 >
 >aaa.com
 
-No need to check anything, Click ==Submit==
+No need to check anything, Click **Submit**
 
 ![image-20210905193014931](image-20210905193014931.png)
 
@@ -203,7 +203,7 @@ In case to enable HTTPS, you have to get a SSL. Definitely you can buy it in you
 
 ### Get a SSL for your domain
 
-You can use ==Let's Encrypt== in aaPanel, and get your SSL via DNS verification.
+You can use **Let's Encrypt** in aaPanel, and get your SSL via DNS verification.
 
 ![image-20210905234257566](image-20210905234257566.png)
 
@@ -211,7 +211,7 @@ Add the following Records in your domain provider page.
 
 ![image-20210905234450284](image-20210905234450284.png)
 
-Once you done, click `verification` and get your SSL that includes ==Private key (KEY)== and ==Certificate==. Save them in somewhere, you would need them for all of your websites.
+Once you done, click `verification` and get your SSL that includes **Private key (KEY)** and **Certificate**. Save them in somewhere, you would need them for all of your websites.
 
 ### Add SSL in your website to enable HTTPS
 
@@ -229,11 +229,11 @@ Make sure to add a Record in your DNS, now you can access your website with `htt
 
 I want you to read this article [What Is a Reverse Proxy Server?](https://www.nginx.com/resources/glossary/reverse-proxy-server/?_bt=541137080527&_bk=&_bm=b&_bn=g&_bg=125748574545&gclid=Cj0KCQjw-NaJBhDsARIsAAja6dOPQkNj6srCLoU-fMoyLd__WalcHKOnIyLgbddbgJFl2vO4DoymOuMaAtKoEALw_wcB) since we would use `Nginx` as reverse proxy server. 
 
-Mainly we would use [Port forwarding](https://en.wikipedia.org/wiki/Port_forwarding). If you ever use `React`, you know when you `npm run start` your server would listen on ==Port 3000== by default, but when you host your project to heroku, you won't see anything like `myproject.heroku.com:3000`, you only see `myproject.heroku.com`. We can use `Nginx` to forward the port from 3000 to 80 (HTTP), so the user would never know where the real listening port is, and you don't have to open Port 3000 in your security group.
+Mainly we would use [Port forwarding](https://en.wikipedia.org/wiki/Port_forwarding). If you ever use `React`, you know when you `npm run start` your server would listen on **Port 3000** by default, but when you host your project to heroku, you won't see anything like `myproject.heroku.com:3000`, you only see `myproject.heroku.com`. We can use `Nginx` to forward the port from 3000 to 80 (HTTP), so the user would never know where the real listening port is, and you don't have to open Port 3000 in your security group.
 
 ## Host a React Project in Two ways
 
-Create a new site names `react.[yourdomain].com`, and add SSL to enable HTTPS, ==delete== the project folder in your `/www/wwwroot`.
+Create a new site names `react.[yourdomain].com`, and add SSL to enable HTTPS, **delete** the project folder in your `/www/wwwroot`.
 
 Open the Terminal in `/www/wwwroot`
 
@@ -245,13 +245,13 @@ Install simple react project by typing:
 npx create-react-app test
 ```
 
-We can deploy a react project in either ==Dev mode== or ==Production mode==. I strongly recommand using ==Production mode== since it can boost your performance and save the server resource.
+We can deploy a react project in either **Dev mode** or **Production mode**. I strongly recommand using **Production mode** since it can boost your performance and save the server resource.
 
 > The reason to use `pm2` is we want to run the project permantly. Without `pm2` If we kill the terminal process, the service would also be killed.
 
 ### ~~Dev Mode~~
 
-Within the ==test== folder, open terminal, and type
+Within the **test** folder, open terminal, and type
 
 ```bash
 pm2 start "npm run start" --name test
@@ -261,7 +261,7 @@ You would see the console like that
 
 ![image-20210906011256632](image-20210906011256632.png)
 
-Go to ==Home Page==, select ==PM2 Manager==
+Go to **Home Page**, select **PM2 Manager**
 
 ![image-20210906011341902](image-20210906011341902.png)
 
