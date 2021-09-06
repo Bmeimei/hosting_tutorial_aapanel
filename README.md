@@ -311,7 +311,7 @@ pm2 restart test
 if you never open this process, type
 
 ```bash
-pm2 start "npm strat" --name test
+pm2 start "npm start" --name test
 ```
 
 Finally, You see the build version here~
